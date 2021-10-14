@@ -1,6 +1,6 @@
 import Posts from "./Posts";
 import Stories from "./Stories";
-import MiniProfile from "./Stories";
+import MiniProfile from "./MiniProfile";
 import Suggestions from "./Suggestions";
 
 
