@@ -17,10 +17,12 @@ const Feed = () => {
             
             {/* Section */}
             <section className="hidden xl:inline-grid md:col-span-1">
-                {/* mini profile */}
-                <MiniProfile />
-                {/* sugestions */}
-                <Suggestions />
+                <div className="fixed top-20">
+                    {/* mini profile */}
+                    <MiniProfile />
+                    {/* sugestions */}
+                    <Suggestions />
+                </div>
             </section>
         </main>
     );
