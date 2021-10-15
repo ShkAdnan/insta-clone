@@ -1,16 +1,24 @@
 import NextAuth from "next-auth"
-import GoogleProvider from "next-auth/providers/google"
+import { session } from "next-auth/client"
+import Providers from "next-auth/providers"
+
 
 export default NextAuth({
-  // Configure one or more authentication providers
+  // https://next-auth.js.org/configuration/providers
   providers: [
-    GoogleProvider({
+    Providers.GitHub({
       clientId: process.env.GOOGLE_CLIENT_ID,
       clientSecret: process.env.GOOGLE_CLIENT_SECRET,
-    }),
-    // ...add more providers here
+    })
   ],
-  pages : {
-        signIn: '/auth/signin'
+  pages: {
+    signIn: '/auth/signin',  // Displays signin buttons
+  },
+  callbacks: {
+    async session(session, token) {
+      // Add property to session, like an access_token from a provider.
+      session.user.username = session.user.name.split(" ").join("").toLocaleLowerCase();
+      return session
     }
+  }
 })

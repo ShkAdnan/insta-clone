@@ -12,7 +12,6 @@ const Stories = () => {
         }));
 
         setSuggestions(suggestions);
-        console.log(suggestions);
     },[]);
 
     return (
