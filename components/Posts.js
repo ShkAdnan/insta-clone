@@ -4,10 +4,10 @@ const Posts = () => {
 
     const posts = [{
         id : '1',
-        username : "shkadnan",
+        username : "someuser",
         caption  : "Practing on Next js cloning instagram",
-        userImg  : "https://links.papareact.com/3ke",
-        img      : "https://links.papareact.com/3ke"
+        userImg  : "./imgs/feed-pic.jpg",
+        img      : "./imgs/share.jpg"
     },
     {
         id : '2',
